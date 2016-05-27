@@ -54,6 +54,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="emojiLabel" destination="qt8-rl-0Ps" id="g4a-H9-LuU"/>
+                                            <segue destination="Din-52-VZH" kind="show" id="BN5-qq-20F"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -102,6 +103,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="285"/>
+        </scene>
+        <!--Emoji Detail View Controller-->
+        <scene sceneID="qO6-il-1Lq">
+            <objects>
+                <viewController id="Din-52-VZH" customClass="EmojiDetailViewController" customModule="Emoji_Talk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xt5-TA-Rta"/>
+                        <viewControllerLayoutGuide type="bottom" id="yki-ng-vwx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UBw-u4-CHp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8h-Mb-Cwz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4B3-D2-D62"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4B3-D2-D62"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onBackButtonTapped:" destination="Din-52-VZH" eventType="touchUpInside" id="yll-V6-1Fy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="😊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPN-Q5-BbC">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="300"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.08235294118" green="0.63137254899999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="B8h-Mb-Cwz" secondAttribute="trailing" constant="-20" id="5eO-10-hyX"/>
+                            <constraint firstItem="B8h-Mb-Cwz" firstAttribute="top" secondItem="xt5-TA-Rta" secondAttribute="bottom" id="Mjc-ei-GSA"/>
+                            <constraint firstItem="fPN-Q5-BbC" firstAttribute="centerX" secondItem="UBw-u4-CHp" secondAttribute="centerX" id="WGV-n6-gnS"/>
+                            <constraint firstItem="fPN-Q5-BbC" firstAttribute="centerY" secondItem="UBw-u4-CHp" secondAttribute="centerY" id="alf-3T-lhP"/>
+                            <constraint firstItem="yki-ng-vwx" firstAttribute="top" secondItem="B8h-Mb-Cwz" secondAttribute="bottom" id="taU-ic-sHi"/>
+                            <constraint firstItem="B8h-Mb-Cwz" firstAttribute="leading" secondItem="UBw-u4-CHp" secondAttribute="leadingMargin" constant="-20" id="y20-nB-k1D"/>
+                            <constraint firstItem="B8h-Mb-Cwz" firstAttribute="top" secondItem="xt5-TA-Rta" secondAttribute="bottom" id="yVJ-wx-Td9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emojiLabel" destination="fPN-Q5-BbC" id="56F-8K-20U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VPu-xd-y4i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1019" y="285"/>
         </scene>
     </scenes>
 </document>

@@ -71,6 +71,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         return true
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? EmojiDetailViewController {
+            let selectedRow = (emojiCollectionView.indexPathsForSelectedItems()?.first!.row)!
+            vc.currentEmoji = emojiList[selectedRow]
+        }
+    }
 
 }
 
