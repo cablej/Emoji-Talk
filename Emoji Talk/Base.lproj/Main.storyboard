@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,22 +18,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Emoji Talk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvI-Lp-Liv">
-                                <rect key="frame" x="258" y="220" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jva-zB-0F0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OdI-zS-jDb">
+                                    <size key="itemSize" width="250" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCell" id="tNS-sO-Qmq" customClass="EmojiCell" customModule="Emoji_Talk" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt8-rl-0Ps">
+                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="250"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="qt8-rl-0Ps" firstAttribute="leading" secondItem="tNS-sO-Qmq" secondAttribute="leadingMargin" constant="-8" id="bKk-ZQ-vxg"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="qt8-rl-0Ps" secondAttribute="trailing" constant="-8" id="coq-ak-L08"/>
+                                            <constraint firstItem="qt8-rl-0Ps" firstAttribute="centerX" secondItem="tNS-sO-Qmq" secondAttribute="centerX" id="ggq-mD-9IP"/>
+                                            <constraint firstItem="qt8-rl-0Ps" firstAttribute="top" secondItem="tNS-sO-Qmq" secondAttribute="topMargin" constant="-8" id="kvG-YD-Voc"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="qt8-rl-0Ps" secondAttribute="bottom" constant="-8" id="nMY-i7-5jA"/>
+                                            <constraint firstItem="qt8-rl-0Ps" firstAttribute="centerY" secondItem="tNS-sO-Qmq" secondAttribute="centerY" id="ncP-KA-D0n"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="emojiLabel" destination="qt8-rl-0Ps" id="g4a-H9-LuU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yvI-Lp-Liv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1aP-yJ-zBe"/>
-                            <constraint firstItem="yvI-Lp-Liv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WHt-vn-bYP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jva-zB-0F0" secondAttribute="trailing" constant="-20" id="8Xy-Jz-Izp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jva-zB-0F0" secondAttribute="bottom" id="IqG-xf-1B0"/>
+                            <constraint firstItem="Jva-zB-0F0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W97-6C-MCb"/>
+                            <constraint firstItem="Jva-zB-0F0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="caO-IJ-IHY"/>
+                            <constraint firstItem="Jva-zB-0F0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="kxG-Lb-NYN"/>
+                            <constraint firstItem="Jva-zB-0F0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="xVQ-0a-oC4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emojiCollectionView" destination="Jva-zB-0F0" id="I2Z-At-Bie"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="285"/>
         </scene>
     </scenes>
 </document>
