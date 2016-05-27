@@ -18,9 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jva-zB-0F0">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jva-zB-0F0">
+                                <rect key="frame" x="0.0" y="94" width="600" height="506"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.63137254899999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OdI-zS-jDb">
                                     <size key="itemSize" width="250" height="250"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -58,19 +58,45 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cil-Ip-bI0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="BRD-VN-VZU"/>
+                                    <constraint firstAttribute="height" constant="100" id="Eza-wF-J52"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onSearchTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="cph-3C-7PR"/>
+                                </connections>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.08235294118" green="0.63137254899999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Jva-zB-0F0" secondAttribute="trailing" constant="-20" id="8Xy-Jz-Izp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jva-zB-0F0" secondAttribute="bottom" id="IqG-xf-1B0"/>
+                            <constraint firstItem="cil-Ip-bI0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="KOB-qZ-SoR"/>
                             <constraint firstItem="Jva-zB-0F0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W97-6C-MCb"/>
                             <constraint firstItem="Jva-zB-0F0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="caO-IJ-IHY"/>
-                            <constraint firstItem="Jva-zB-0F0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="kxG-Lb-NYN"/>
+                            <constraint firstItem="cil-Ip-bI0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f03-fv-Mjp"/>
+                            <constraint firstItem="Jva-zB-0F0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="100" id="kxG-Lb-NYN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cil-Ip-bI0" secondAttribute="trailing" constant="-20" id="qi6-8a-f07"/>
+                            <constraint firstItem="Jva-zB-0F0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="tf2-b0-LD4"/>
+                            <constraint firstItem="cil-Ip-bI0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vMw-ja-nHP"/>
                             <constraint firstItem="Jva-zB-0F0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="xVQ-0a-oC4"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="caO-IJ-IHY"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="emojiCollectionView" destination="Jva-zB-0F0" id="I2Z-At-Bie"/>
+                        <outlet property="searchTextField" destination="cil-Ip-bI0" id="oTo-c9-eh4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

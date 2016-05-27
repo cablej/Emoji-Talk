@@ -9,24 +9,32 @@
 import UIKit
 import EmojiKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
 
     @IBOutlet var emojiCollectionView: UICollectionView!
     
     var emojiList : [Emoji] = []
     
+    var searchQuery = ""
+    var DEFAULT_QUERY = "face"
+    
+    @IBOutlet var searchTextField: UITextField!
+    
+    let fetcher = EmojiFetcher()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let fetcher = EmojiFetcher()
         
         emojiCollectionView.dataSource = self
         emojiCollectionView.delegate = self
         
-        fetcher.query("face") { emojiResults in
-            /*for emoji in emojiResults {
-                print("Current Emoji: \(emoji.character) \(emoji.name)")
-            }*/
+        searchTextField.delegate = self
+        
+        processQuery()
+    }
+    
+    func processQuery() {
+        fetcher.query(searchQuery == "" ? DEFAULT_QUERY : searchQuery) { emojiResults in
             self.emojiList = emojiResults
             dispatch_async(dispatch_get_main_queue(),{ //operate on main thread
                 self.emojiCollectionView.reloadData()
@@ -50,7 +58,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
+    }
 
+    @IBAction func onSearchTextFieldEditingChanged(sender: AnyObject) {
+        searchQuery = searchTextField.text!
+        processQuery()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        return true
+    }
 
 }
 
