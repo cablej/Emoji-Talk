@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1A915FD7CE04A4D5123B9F69 /* Pods_Emoji_Talk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D557C560E3892BD56FBD6BB /* Pods_Emoji_Talk.framework */; };
+		D126B7141CF9CA6100502198 /* DefaultEmojis.json in Resources */ = {isa = PBXBuildFile; fileRef = D126B7131CF9CA6100502198 /* DefaultEmojis.json */; };
+		D126B7161CF9CF6A00502198 /* EmojiTalkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D126B7151CF9CF6A00502198 /* EmojiTalkHelper.swift */; };
+		D126B7181CF9D48E00502198 /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D126B7171CF9D48E00502198 /* EmojiTableViewCell.swift */; };
+		D126B71A1CF9DE0300502198 /* EditEmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D126B7191CF9DE0300502198 /* EditEmojiViewController.swift */; };
+		D126B71E1CF9EC6100502198 /* AddEmojiTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D126B71D1CF9EC6100502198 /* AddEmojiTableTableViewController.swift */; };
 		D14DA2871CF94B71001F281A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14DA2861CF94B71001F281A /* SettingsViewController.swift */; };
 		D14DA28B1CF94ED0001F281A /* CustomizeEmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14DA28A1CF94ED0001F281A /* CustomizeEmojiTableViewController.swift */; };
 		D168059C1CF8FCA80080A13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D168059B1CF8FCA80080A13B /* AppDelegate.swift */; };
@@ -43,6 +48,11 @@
 		2632ED51ED0E68FDC27593E0 /* Pods-Emoji Talk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emoji Talk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emoji Talk/Pods-Emoji Talk.release.xcconfig"; sourceTree = "<group>"; };
 		58EC7EFDBA9977AEAFF1BDF4 /* Pods-Emoji Talk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emoji Talk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emoji Talk/Pods-Emoji Talk.debug.xcconfig"; sourceTree = "<group>"; };
 		5D557C560E3892BD56FBD6BB /* Pods_Emoji_Talk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emoji_Talk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D126B7131CF9CA6100502198 /* DefaultEmojis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DefaultEmojis.json; sourceTree = "<group>"; };
+		D126B7151CF9CF6A00502198 /* EmojiTalkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTalkHelper.swift; sourceTree = "<group>"; };
+		D126B7171CF9D48E00502198 /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
+		D126B7191CF9DE0300502198 /* EditEmojiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEmojiViewController.swift; sourceTree = "<group>"; };
+		D126B71D1CF9EC6100502198 /* AddEmojiTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEmojiTableTableViewController.swift; sourceTree = "<group>"; };
 		D14DA2861CF94B71001F281A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D14DA28A1CF94ED0001F281A /* CustomizeEmojiTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizeEmojiTableViewController.swift; sourceTree = "<group>"; };
 		D16805981CF8FCA80080A13B /* Emoji Talk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji Talk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +152,11 @@
 				D16805A71CF8FCA80080A13B /* Info.plist */,
 				D17E1BFB1CF9025500138C02 /* EmojiCell.swift */,
 				D14DA28A1CF94ED0001F281A /* CustomizeEmojiTableViewController.swift */,
+				D126B7131CF9CA6100502198 /* DefaultEmojis.json */,
+				D126B7151CF9CF6A00502198 /* EmojiTalkHelper.swift */,
+				D126B7171CF9D48E00502198 /* EmojiTableViewCell.swift */,
+				D126B7191CF9DE0300502198 /* EditEmojiViewController.swift */,
+				D126B71D1CF9EC6100502198 /* AddEmojiTableTableViewController.swift */,
 			);
 			path = "Emoji Talk";
 			sourceTree = "<group>";
@@ -273,6 +288,7 @@
 			files = (
 				D16805A61CF8FCA80080A13B /* LaunchScreen.storyboard in Resources */,
 				D16805A31CF8FCA80080A13B /* Assets.xcassets in Resources */,
+				D126B7141CF9CA6100502198 /* DefaultEmojis.json in Resources */,
 				D16805A11CF8FCA80080A13B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +362,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D126B7161CF9CF6A00502198 /* EmojiTalkHelper.swift in Sources */,
+				D126B71A1CF9DE0300502198 /* EditEmojiViewController.swift in Sources */,
+				D126B7181CF9D48E00502198 /* EmojiTableViewCell.swift in Sources */,
 				D17E1BFE1CF90E1900138C02 /* EmojiDetailViewController.swift in Sources */,
 				D17E1BFC1CF9025500138C02 /* EmojiCell.swift in Sources */,
 				D17E1C001CF926FB00138C02 /* SpellViewController.swift in Sources */,
@@ -353,6 +372,7 @@
 				D168059E1CF8FCA80080A13B /* ViewController.swift in Sources */,
 				D168059C1CF8FCA80080A13B /* AppDelegate.swift in Sources */,
 				D14DA2871CF94B71001F281A /* SettingsViewController.swift in Sources */,
+				D126B71E1CF9EC6100502198 /* AddEmojiTableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Settings View Controller-->
@@ -116,9 +117,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                 <state key="normal" title="Customize Emojis"/>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="700" width="795" height="100"/>
-                                </variation>
                                 <connections>
                                     <segue destination="soV-Pf-ybc" kind="show" id="BLY-Iz-bGV"/>
                                 </connections>
@@ -160,27 +158,27 @@
                                 <exclude reference="j4r-cE-Rrv"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1bq-xy-evz"/>
-                                <exclude reference="4kb-IR-goF"/>
-                                <exclude reference="IqG-a3-vbv"/>
-                                <exclude reference="rMW-aq-CEM"/>
-                                <exclude reference="GnD-ne-d5x"/>
-                                <exclude reference="M07-86-7bu"/>
-                                <exclude reference="TZo-Fz-JmV"/>
-                                <exclude reference="n37-9P-yRw"/>
+                                <exclude reference="Erg-Ki-vE4"/>
+                                <exclude reference="9x8-4k-4PF"/>
+                                <exclude reference="LeN-uK-Lif"/>
+                                <exclude reference="meG-mT-57T"/>
+                                <exclude reference="YnX-5d-Z6x"/>
+                                <exclude reference="pw5-tJ-Tqc"/>
+                                <exclude reference="JSH-Vk-YFL"/>
+                                <exclude reference="Uzo-Im-vpc"/>
+                                <exclude reference="xse-LP-Bfd"/>
                                 <exclude reference="5PS-2p-yh8"/>
                                 <exclude reference="S1R-32-c4i"/>
                                 <exclude reference="mBq-Gd-dTz"/>
                                 <exclude reference="xuE-2a-mcK"/>
-                                <exclude reference="YnX-5d-Z6x"/>
-                                <exclude reference="pw5-tJ-Tqc"/>
-                                <exclude reference="9x8-4k-4PF"/>
-                                <exclude reference="LeN-uK-Lif"/>
-                                <exclude reference="meG-mT-57T"/>
-                                <exclude reference="JSH-Vk-YFL"/>
-                                <exclude reference="Uzo-Im-vpc"/>
-                                <exclude reference="xse-LP-Bfd"/>
-                                <exclude reference="Erg-Ki-vE4"/>
+                                <exclude reference="GnD-ne-d5x"/>
+                                <exclude reference="M07-86-7bu"/>
+                                <exclude reference="TZo-Fz-JmV"/>
+                                <exclude reference="n37-9P-yRw"/>
+                                <exclude reference="1bq-xy-evz"/>
+                                <exclude reference="4kb-IR-goF"/>
+                                <exclude reference="IqG-a3-vbv"/>
+                                <exclude reference="rMW-aq-CEM"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -193,27 +191,27 @@
                                 <include reference="j4r-cE-Rrv"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1bq-xy-evz"/>
-                                <include reference="4kb-IR-goF"/>
-                                <include reference="IqG-a3-vbv"/>
-                                <include reference="rMW-aq-CEM"/>
-                                <include reference="GnD-ne-d5x"/>
-                                <include reference="M07-86-7bu"/>
-                                <include reference="TZo-Fz-JmV"/>
-                                <include reference="n37-9P-yRw"/>
+                                <include reference="Erg-Ki-vE4"/>
+                                <include reference="9x8-4k-4PF"/>
+                                <exclude reference="LeN-uK-Lif"/>
+                                <include reference="meG-mT-57T"/>
+                                <include reference="YnX-5d-Z6x"/>
+                                <include reference="pw5-tJ-Tqc"/>
+                                <include reference="JSH-Vk-YFL"/>
+                                <include reference="Uzo-Im-vpc"/>
+                                <include reference="xse-LP-Bfd"/>
                                 <include reference="5PS-2p-yh8"/>
                                 <exclude reference="S1R-32-c4i"/>
                                 <include reference="mBq-Gd-dTz"/>
                                 <exclude reference="xuE-2a-mcK"/>
-                                <include reference="YnX-5d-Z6x"/>
-                                <include reference="pw5-tJ-Tqc"/>
-                                <include reference="9x8-4k-4PF"/>
-                                <exclude reference="LeN-uK-Lif"/>
-                                <include reference="meG-mT-57T"/>
-                                <include reference="JSH-Vk-YFL"/>
-                                <include reference="Uzo-Im-vpc"/>
-                                <include reference="xse-LP-Bfd"/>
-                                <include reference="Erg-Ki-vE4"/>
+                                <include reference="GnD-ne-d5x"/>
+                                <include reference="M07-86-7bu"/>
+                                <include reference="TZo-Fz-JmV"/>
+                                <include reference="n37-9P-yRw"/>
+                                <include reference="1bq-xy-evz"/>
+                                <include reference="4kb-IR-goF"/>
+                                <include reference="IqG-a3-vbv"/>
+                                <include reference="rMW-aq-CEM"/>
                             </mask>
                         </variation>
                     </view>
@@ -227,14 +225,57 @@
             <objects>
                 <tableViewController id="xkT-w1-HOo" customClass="CustomizeEmojiTableViewController" customModule="Emoji_Talk" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bGf-KA-kjB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Vnj-kB-dRN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EmojiCell" id="Vnj-kB-dRN" customClass="EmojiTableViewCell" customModule="Emoji_Talk" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vnj-kB-dRN" id="R4N-cA-7JQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm happy 😊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aru-jj-qsk">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                <rect key="frame" x="8" y="11" width="286" height="21"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aru-jj-qsk" firstAttribute="leading" secondItem="R4N-cA-7JQ" secondAttribute="leadingMargin" id="AvW-lE-DjR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="aru-jj-qsk" secondAttribute="trailing" id="MaQ-QJ-H5c"/>
+                                        <constraint firstItem="aru-jj-qsk" firstAttribute="centerY" secondItem="R4N-cA-7JQ" secondAttribute="centerY" id="c3W-mP-gN5"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="aru-jj-qsk"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="AvW-lE-DjR"/>
+                                            <exclude reference="MaQ-QJ-H5c"/>
+                                            <exclude reference="c3W-mP-gN5"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <mask key="subviews">
+                                            <include reference="aru-jj-qsk"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="AvW-lE-DjR"/>
+                                            <include reference="MaQ-QJ-H5c"/>
+                                            <include reference="c3W-mP-gN5"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="aru-jj-qsk" id="lLe-HB-cj1"/>
+                                    <segue destination="QLs-2w-j3L" kind="presentation" modalPresentationStyle="formSheet" id="E8w-QM-6QF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -244,14 +285,21 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Customize Emojis" id="9P0-rU-k5W">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="bMB-0j-M7P">
+                        <leftBarButtonItems>
+                            <barButtonItem systemItem="add" id="bMB-0j-M7P">
+                                <connections>
+                                    <segue destination="aX2-z0-iaY" kind="presentation" modalPresentationStyle="formSheet" id="x5L-qz-735"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" systemItem="edit" id="842-Js-6i7">
+                                <connections>
+                                    <action selector="onEditButtonTapped:" destination="xkT-w1-HOo" id="126-Y2-QRx"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TuF-69-fUG">
                             <connections>
-                                <action selector="onCancelButtonTapped:" destination="xkT-w1-HOo" id="UT1-T8-FET"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="TuF-69-fUG">
-                            <connections>
-                                <action selector="onSaveButtonTapped:" destination="xkT-w1-HOo" id="B3k-Mk-A5P"/>
+                                <action selector="onDoneButtonTapped:" destination="xkT-w1-HOo" id="32G-bf-EKb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -261,6 +309,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4Z-ne-l7K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1063.5" y="1755.75"/>
+        </scene>
+        <!--Edit Emoji-->
+        <scene sceneID="iMN-j9-Unj">
+            <objects>
+                <viewController id="3C6-u5-PIq" customClass="EditEmojiViewController" customModule="Emoji_Talk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lhr-J4-j5U"/>
+                        <viewControllerLayoutGuide type="bottom" id="fyz-7E-zfS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UtC-42-0Oi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="😊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQg-Ja-SDx">
+                                <rect key="frame" x="163" y="232" width="150" height="150"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="225" y="325" width="150" height="150"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="I'm Happy" placeholder="I'm ..." textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ooN-VA-oG7">
+                                <rect key="frame" x="0.0" y="80" width="600" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="92" width="600" height="100"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xQg-Ja-SDx" firstAttribute="centerX" secondItem="UtC-42-0Oi" secondAttribute="centerX" id="3IQ-Yx-FX0"/>
+                            <constraint firstItem="ooN-VA-oG7" firstAttribute="leading" secondItem="UtC-42-0Oi" secondAttribute="leadingMargin" constant="-20" id="5ls-wH-vK1"/>
+                            <constraint firstItem="xQg-Ja-SDx" firstAttribute="centerY" secondItem="UtC-42-0Oi" secondAttribute="centerY" id="ODx-bE-7u7"/>
+                            <constraint firstItem="ooN-VA-oG7" firstAttribute="leading" secondItem="UtC-42-0Oi" secondAttribute="leadingMargin" constant="-20" id="UjQ-va-p7X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ooN-VA-oG7" secondAttribute="trailing" constant="-20" id="ZnQ-Of-tCr"/>
+                            <constraint firstItem="xQg-Ja-SDx" firstAttribute="centerY" secondItem="UtC-42-0Oi" secondAttribute="centerY" id="eXz-NB-GLM"/>
+                            <constraint firstItem="ooN-VA-oG7" firstAttribute="top" secondItem="lhr-J4-j5U" secondAttribute="bottom" constant="48" id="gr8-Bg-KCG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ooN-VA-oG7" secondAttribute="trailing" constant="-20" id="hvb-Wo-ScW"/>
+                            <constraint firstItem="xQg-Ja-SDx" firstAttribute="centerX" secondItem="UtC-42-0Oi" secondAttribute="centerX" id="kV8-Qh-e95"/>
+                            <constraint firstItem="ooN-VA-oG7" firstAttribute="top" secondItem="lhr-J4-j5U" secondAttribute="bottom" constant="48" id="uFm-xh-zdL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5ls-wH-vK1"/>
+                                <exclude reference="ZnQ-Of-tCr"/>
+                                <exclude reference="uFm-xh-zdL"/>
+                                <exclude reference="3IQ-Yx-FX0"/>
+                                <exclude reference="eXz-NB-GLM"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="xQg-Ja-SDx"/>
+                                <include reference="ooN-VA-oG7"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="5ls-wH-vK1"/>
+                                <include reference="ZnQ-Of-tCr"/>
+                                <include reference="uFm-xh-zdL"/>
+                                <include reference="3IQ-Yx-FX0"/>
+                                <include reference="eXz-NB-GLM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Emoji" id="tCV-3H-QWe">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" systemItem="cancel" id="2oy-9z-dIr">
+                            <connections>
+                                <action selector="onCancelButtontapped:" destination="3C6-u5-PIq" id="k1c-DI-xrv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="o42-vs-rSV">
+                            <connections>
+                                <action selector="onSaveButtonTapped:" destination="3C6-u5-PIq" id="xdj-0C-YWa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emojiLabel" destination="xQg-Ja-SDx" id="QIn-LY-cyA"/>
+                        <outlet property="emojiTextField" destination="ooN-VA-oG7" id="0qd-OH-4o2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUI-Ft-sHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2471" y="1751"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -285,7 +420,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCell" id="tNS-sO-Qmq" customClass="EmojiCell" customModule="Emoji_Talk" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <rect key="frame" x="0.0" y="44" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -514,18 +649,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onDoneButtonTapped:" destination="JDh-aY-5UQ" eventType="touchUpInside" id="vAw-M3-NAH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzq-Cd-lTp">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="5Zq-K1-efD"/>
-                                    <constraint firstAttribute="height" constant="300" id="ezC-w2-9Hh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="250"/>
-                                <state key="normal" title="😊"/>
-                                <connections>
-                                    <action selector="onEmojiButtonTapped:" destination="JDh-aY-5UQ" eventType="touchUpInside" id="eKE-iG-dNH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhQ-Mm-IW6">
@@ -930,6 +1053,18 @@
                                     </mask>
                                 </variation>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzq-Cd-lTp">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5Zq-K1-efD"/>
+                                    <constraint firstAttribute="height" constant="300" id="ezC-w2-9Hh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="250"/>
+                                <state key="normal" title="😊"/>
+                                <connections>
+                                    <action selector="onEmojiButtonTapped:" destination="JDh-aY-5UQ" eventType="touchUpInside" id="eKE-iG-dNH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.08235294118" green="0.63137254899999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1025,5 +1160,99 @@
             </objects>
             <point key="canvasLocation" x="304.5" y="1755.75"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tKx-91-eYS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QLs-2w-j3L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qf4-jU-CNV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3C6-u5-PIq" kind="relationship" relationship="rootViewController" id="K7o-Br-CdD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="za3-8x-ZOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1735.5" y="1751.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZHr-Jg-Ps2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aX2-z0-iaY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c3f-Jj-Of6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bdK-zx-fRf" kind="relationship" relationship="rootViewController" id="TUs-gG-44e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BpL-E7-pvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063" y="2418"/>
+        </scene>
+        <!--Add Emoji-->
+        <scene sceneID="93N-b6-OMU">
+            <objects>
+                <tableViewController id="bdK-zx-fRf" customClass="AddEmojiTableTableViewController" customModule="Emoji_Talk" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aHs-eQ-c1n">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="BSb-q0-AZQ">
+                            <rect key="frame" x="0.0" y="44" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EmojiCell" id="qI1-Bg-Lqa" customClass="EmojiTableViewCell" customModule="Emoji_Talk" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="116" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qI1-Bg-Lqa" id="SCK-gn-T7f">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="😊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hx-Sm-h4h">
+                                            <rect key="frame" x="28" y="11" width="22" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="4hx-Sm-h4h" id="OkK-oi-Jsi"/>
+                                    <segue destination="QLs-2w-j3L" kind="presentation" modalPresentationStyle="overCurrentContext" id="akr-oB-xiN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bdK-zx-fRf" id="sQV-yh-IIK"/>
+                            <outlet property="delegate" destination="bdK-zx-fRf" id="1tX-EC-Tsg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Emoji" id="Hip-5U-aCh">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="EGf-Du-ajV">
+                            <connections>
+                                <action selector="onCancelButtontapped:" destination="bdK-zx-fRf" id="99E-xk-KPM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="BSb-q0-AZQ" id="fbf-MT-s1D"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lpj-h4-LV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1754" y="2418"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="akr-oB-xiN"/>
+    </inferredMetricsTieBreakers>
 </document>

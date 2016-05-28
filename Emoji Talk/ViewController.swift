@@ -15,11 +15,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var emojiList : [Emoji] = []
     
-    var searchQuery = ""
-    var DEFAULT_QUERY = "emoji"
-    
-    @IBOutlet var searchTextField: UITextField!
-    
     let fetcher = EmojiFetcher()
     
     override func viewDidLoad() {
@@ -30,7 +25,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         //searchTextField.delegate = self
         
-        processQuery()
+        initializeEmojis()
+    }
+    
+    func initializeEmojis() {
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -39,15 +37,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if let color = NSUserDefaults.standardUserDefaults().colorForKey("color") {
             emojiCollectionView.backgroundColor = color
         }
-    }
-    
-    func processQuery() {
-        fetcher.query(searchQuery == "" ? DEFAULT_QUERY : searchQuery) { emojiResults in
-            self.emojiList = emojiResults
+        
+        EmojiTalkHelper.initializeAndReturnEmojis { (emojiList) in
+            self.emojiList = emojiList
             dispatch_async(dispatch_get_main_queue(),{ //operate on main thread
                 self.emojiCollectionView.reloadData()
             })
         }
+        
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -69,11 +66,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func prefersStatusBarHidden() -> Bool {
         return true;
-    }
-
-    @IBAction func onSearchTextFieldEditingChanged(sender: AnyObject) {
-        searchQuery = searchTextField.text!
-        processQuery()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

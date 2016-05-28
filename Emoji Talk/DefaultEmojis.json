@@ -1,0 +1,168 @@
+[
+ {
+ "character": "😴",
+ "groups": ["emoji"],
+ "name": "I'm tired"
+ },{
+ "groups": [
+            "face", "emoji"
+            ],
+ "character": "🙂",
+ "name": "I'm happy",
+ "aliases": [
+             "happy",
+             "smiley"
+             ]
+ },
+ {
+ "character": "😃",
+ "aliases": [
+             "happy"
+             ],
+ "groups": [
+            "face", "emoji"
+            ],
+ "name": "I'm excited"
+ },
+ {
+ "groups": [
+            "face", "emoji"
+            ],
+ "character": "🙁",
+ "name": "I'm sad",
+ "aliases": [
+             "sad",
+             "upset",
+             "unhappy"
+             ]
+ },
+ {
+ "character": "😡",
+ "aliases": [
+             "angry",
+             "upset"
+             ],
+ "groups": [
+            "face", "emoji"
+            ],
+ "name": "I'm angry"
+ },
+ {
+ "groups": [
+            "face", "emoji"
+            ],
+ "character": "🤒",
+ "name": "I'm sick",
+ "aliases": [
+             "sick",
+             "temperature",
+             "cold",
+             "fever"
+             ]
+ },
+ {
+ "character": "😖",
+ "aliases": [
+             "frown",
+             "cry",
+             "confused"
+             ],
+ "groups": [
+            "face", "emoji"
+            ],
+ "name": "I'm confused"
+ },
+ {
+ "character": "😜",
+ "aliases": [
+             "silly"
+             ],
+ "groups": [
+            "face", "emoji"
+            ],
+ "name": "I'm silly"
+ },
+ {
+ "groups": [
+            "face", "emoji"
+            ],
+ "character": "🤔",
+ "name": "I'm not sure",
+ "aliases": [
+             "thought"
+             ]
+ },
+ {
+ "character": "😍",
+ "aliases": [
+             "love"
+             ],
+ "groups": [
+            "face", "emoji"
+            ],
+ "name": "I love you"
+ },
+ {
+ "character": "😭",
+ "aliases": [
+             "cry",
+             "crying"
+             ],
+ "groups": [
+            "face", "emoji"
+            ],
+ "name": "I'm crying"
+ },
+ {
+ "character": "😬",
+ "aliases": [
+             "teeth"
+             ],
+ "groups": [
+            "face", "emoji"
+            ],
+ "name": "I'm frustrated"
+ },
+ {
+ "character": "😳",
+ "aliases": [
+             "big eyes",
+             "eyes",
+             "stare"
+             ],
+ "groups": [
+            "face", "emoji"
+            ],
+ "name": "I'm embarrassed"
+ },
+ {
+ "character": "😨",
+ "aliases": [
+             "afraid",
+             "scared",
+             "terrified"
+             ],
+ "groups": ["emoji"],
+ "name": "I'm scared"
+ },
+ {
+ "character": "🍔",
+ "aliases": [
+             "hamburger"
+             ],
+ "groups": [
+            "food", "emoji"
+            ],
+ "name": "I'm hungry"
+ },
+ {
+ "character": "💦",
+ "aliases": [
+             "water",
+             "sweat",
+             "tears"
+             ],
+ "groups": ["emoji"],
+ "name": "I'm thirsty"
+ }
+ ]

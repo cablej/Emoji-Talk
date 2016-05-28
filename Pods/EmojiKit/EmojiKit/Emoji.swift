@@ -8,8 +8,8 @@
 
 public struct Emoji: Equatable {
 
-    public let name: String
-    public let character: String
+    public var name: String
+    public var character: String
     internal let aliases: [String]
     internal let groups: [String]
 
@@ -32,6 +32,13 @@ extension Emoji: DictionaryDeserializable, DictionarySerializable {
         self.character = character
         self.aliases = aliases
         self.groups = groups
+    }
+    
+    public init?(name: String, character: String) {
+        self.name = name
+        self.character = character
+        self.aliases = []
+        self.groups = ["emoji"]
     }
 
     public var dictionary: JSONDictionary {

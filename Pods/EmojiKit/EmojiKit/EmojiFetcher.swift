@@ -25,11 +25,33 @@ public struct EmojiFetcher {
 
     // MARK: - Functions
 
+    public func allEmojis(emojiData: NSData, completion: ([Emoji] -> Void)) {
+        cancelFetches()
+        
+        let operation = EmojiFetchOperation(searchString: "emoji", emojiData: emojiData)
+        
+        operation.completionBlock = {
+            
+            if operation.cancelled {
+                return;
+            }
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                completion(operation.results)
+            }
+        }
+        
+        backgroundQueue.addOperation(operation)
+
+    }
+    
     public func query(searchString: String, completion: ([Emoji] -> Void)) {
         cancelFetches()
 
-        let operation = EmojiFetchOperation(searchString: searchString)
+        let operation = EmojiFetchOperation(searchString: searchString, emojiData: nil)
 
+        //operation.emojiJSONString =
+        
         operation.completionBlock = {
 
             if operation.cancelled {
@@ -52,6 +74,8 @@ public struct EmojiFetcher {
 
 private final class EmojiFetchOperation: NSOperation {
 
+    public var emojiData: NSData?
+    
     static let allEmoji: [Emoji] = {
         guard let path = NSBundle(forClass: EmojiFetchOperation.self).pathForResource("AllEmoji", ofType: "json"),
             data = NSData(contentsOfFile: path),
@@ -70,8 +94,9 @@ private final class EmojiFetchOperation: NSOperation {
 
     // MARK: - Initializers
 
-    init(searchString: String) {
+    init(searchString: String, emojiData: NSData?) {
         self.searchString = searchString
+        self.emojiData = emojiData
     }
 
 
@@ -79,7 +104,18 @@ private final class EmojiFetchOperation: NSOperation {
 
     override func main() {
         let lowercaseSearchString = self.searchString.lowercaseString
-        let allEmoji = self.dynamicType.allEmoji
+        
+        var allEmoji: [Emoji];
+        
+        if let emojiData = emojiData {
+            guard let jsonObject = try? NSJSONSerialization.JSONObjectWithData(emojiData, options: []),
+                jsonDictionaries = jsonObject as? [JSONDictionary] else {return}
+            
+            allEmoji = jsonDictionaries.flatMap { Emoji(dictionary: $0) }
+        } else {
+            allEmoji = self.dynamicType.allEmoji
+        }
+        
         guard !cancelled else { return }
 
         var results = [Emoji]()
