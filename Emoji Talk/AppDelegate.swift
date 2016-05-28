@@ -7,18 +7,63 @@
 //
 
 import UIKit
+import Onboard
+import EmojiKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let kUserHasOnboardedKey = "user_has_onboarded"
+    
+    var secondPage : OnboardingContentViewController?;
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         application.statusBarHidden = true
+        
+        let userHasOnboarded = NSUserDefaults.standardUserDefaults().boolForKey(kUserHasOnboardedKey)
+        
+        if userHasOnboarded {
+            return true
+        } else {
+            self.window?.rootViewController = generateStandardOnboardingVC()
+        }
+        
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
+    
+    func setUpNormalViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("main") as! ViewController
+        self.window?.rootViewController!.presentViewController(vc, animated: true, completion: nil)
+        
+        NSUserDefaults.standardUserDefaults().setObject(true, forKey: kUserHasOnboardedKey)
+    }
+    
+    func handleOnboardingCompletion() {
+        setUpNormalViewController()
+    }
+    
+    func generateStandardOnboardingVC() -> OnboardingViewController {
+        let firstPage = OnboardingContentViewController(title: "Welcome to Emoji Talk.", body: "Making communication as easy as emoji.", image: UIImage(named: "Icon-Small-50"), buttonText: "Get Started") {
+        }
+        firstPage.movesToNextViewController = true
+        secondPage = OnboardingContentViewController(title: "What is your name?", body: "nameField", image: UIImage(named: "Icon-Small-50"), buttonText: "Continue") {
+            EmojiTalkHelper.addEmoji(Emoji(name: "My name is \(self.secondPage!.subTextField.text!)", character: "😎")!)
+            self.handleOnboardingCompletion()
+        }
+        let onboardingViewController = OnboardingViewController(backgroundImage: UIImage(named: "boy with ipad"), contents: [firstPage, secondPage!])
+        onboardingViewController.shouldBlurBackground = true;
+        onboardingViewController.shouldMaskBackground = false;
+        onboardingViewController.pageControl.hidden = true;
+        return onboardingViewController
+    }
+    
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

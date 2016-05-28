@@ -32,7 +32,7 @@ NSString * const kOnboardMainTextAccessibilityIdentifier = @"OnboardMainTextAcce
 NSString * const kOnboardSubTextAccessibilityIdentifier = @"OnboardSubTextAccessibilityIdentifier";
 NSString * const kOnboardActionButtonAccessibilityIdentifier = @"OnboardActionButtonAccessibilityIdentifier";
 
-@interface OnboardingContentViewController ()
+@interface OnboardingContentViewController () <UITextFieldDelegate>
 
 @property (nonatomic, strong) MPMoviePlayerController *moviePlayerController;
 @property (nonatomic, strong) NSURL *videoURL;
@@ -223,6 +223,11 @@ NSString * const kOnboardActionButtonAccessibilityIdentifier = @"OnboardActionBu
     _buttonActionHandler = actionBlock ?: ^(OnboardingViewController *controller){};
 }
 
+-(BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (void)generateView {
     // we want our background to be clear so we can see through it to the image provided
     self.view.backgroundColor = [UIColor clearColor];
@@ -271,16 +276,34 @@ NSString * const kOnboardActionButtonAccessibilityIdentifier = @"OnboardActionBu
     _mainTextLabel.center = CGPointMake(horizontalCenter, _mainTextLabel.center.y);
     [self.view addSubview:_mainTextLabel];
     
-    // create and configure the sub text label
-    _subTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_mainTextLabel.frame) + self.underTitlePadding, contentWidth, 0)];
-    _subTextLabel.accessibilityIdentifier = kOnboardSubTextAccessibilityIdentifier;
-    _subTextLabel.text = _body;
-    _subTextLabel.textColor = self.bodyTextColor;
-    _subTextLabel.font = [UIFont fontWithName:self.bodyFontName size:self.bodyFontSize];
-    _subTextLabel.numberOfLines = 0;
-    _subTextLabel.textAlignment = NSTextAlignmentCenter;
-    [_subTextLabel sizeToFit];
-    _subTextLabel.center = CGPointMake(horizontalCenter, _subTextLabel.center.y);
+    
+    if([_body isEqualToString: @"nameField"]) {
+        _subTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_mainTextLabel.frame) + self.underTitlePadding, contentWidth, 0)];
+        _subTextField.accessibilityIdentifier = kOnboardSubTextAccessibilityIdentifier;
+        _subTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Your name" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+        _subTextField.textColor = self.bodyTextColor;
+        _subTextField.font = [UIFont fontWithName:self.bodyFontName size:self.bodyFontSize];
+        _subTextField.textAlignment = NSTextAlignmentCenter;
+        [_subTextField sizeToFit];
+        _subTextField.center = CGPointMake(horizontalCenter, _subTextField.center.y);
+        
+        _subTextField.delegate = self;
+        
+        [self.view addSubview:_subTextField];
+    } else {
+        // create and configure the sub text label
+        _subTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_mainTextLabel.frame) + self.underTitlePadding, contentWidth, 0)];
+        _subTextLabel.accessibilityIdentifier = kOnboardSubTextAccessibilityIdentifier;
+        _subTextLabel.text = _body;
+        _subTextLabel.textColor = self.bodyTextColor;
+        _subTextLabel.font = [UIFont fontWithName:self.bodyFontName size:self.bodyFontSize];
+        _subTextLabel.numberOfLines = 0;
+        _subTextLabel.textAlignment = NSTextAlignmentCenter;
+        [_subTextLabel sizeToFit];
+        _subTextLabel.center = CGPointMake(horizontalCenter, _subTextLabel.center.y);
+        
+    }
+    
     [self.view addSubview:_subTextLabel];
     
     // create the action button if we were given button text
@@ -327,6 +350,7 @@ NSString * const kOnboardActionButtonAccessibilityIdentifier = @"OnboardActionBu
     _imageView.alpha = newAlpha;
     _mainTextLabel.alpha = newAlpha;
     _subTextLabel.alpha = newAlpha;
+    _subTextField.alpha = newAlpha;
     _actionButton.alpha = newAlpha;
 }
 

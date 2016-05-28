@@ -52,6 +52,7 @@ class StoryViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         if let color = NSUserDefaults.standardUserDefaults().colorForKey("color") {
             view.backgroundColor = color
+            emojiCollectionView.backgroundColor = color
         }
         
         EmojiTalkHelper.initializeAndReturnEmojis { (emojiList) in

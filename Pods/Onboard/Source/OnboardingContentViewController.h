@@ -29,6 +29,8 @@ typedef void (^action_callback)(OnboardingViewController *onboardController);
     UIButton *_actionButton;
 }
 
+@property (nonatomic, strong) UITextField *subTextField;
+
 @property (nonatomic) OnboardingViewController *delegate;
 
 @property (nonatomic) BOOL movesToNextViewController;

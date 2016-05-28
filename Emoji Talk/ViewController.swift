@@ -28,7 +28,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let font = UIFont.systemFontOfSize(32)
         
         storyBarButtonItem.setTitleTextAttributes([NSFontAttributeName:font], forState: UIControlState.Normal)
-        
     }
     
     override func viewWillAppear(animated: Bool) {

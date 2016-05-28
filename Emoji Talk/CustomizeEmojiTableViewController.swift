@@ -90,7 +90,7 @@ class CustomizeEmojiTableViewController: UITableViewController {
         
         for emoji in emojiList {
             if(emoji.character == character) {
-                emojiList[tableView.indexPathForSelectedRow!.row].name = name as! String
+                emojiList[tableView.indexPathForSelectedRow!.row].name = name
                 tableView.reloadData()
                 NSNotificationCenter.defaultCenter().removeObserver(self, name: "saveEmojiNotification", object: nil)
                 return

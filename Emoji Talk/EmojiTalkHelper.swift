@@ -46,6 +46,30 @@ class EmojiTalkHelper: NSObject {
         return fileManager.fileExistsAtPath(filePath)
     }
     
+    class func addEmoji(emoji: Emoji) {
+        let emojiList = initializeAndReturnEmojis { (emojiList) in
+            var newEmojiList = emojiList
+            newEmojiList.append(emoji)
+            writeEmojisToFile(newEmojiList)
+        }
+    }
+    
+    class func resetEmojis() {
+        let bundle = NSBundle.mainBundle()
+        let path = bundle.pathForResource("DefaultEmojis", ofType: "json")
+        let fileContent = try? NSString(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
+        
+        let writePath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        let url = NSURL(fileURLWithPath: writePath)
+        do {
+            try fileContent!.writeToURL(url.URLByAppendingPathComponent(fileName), atomically: false, encoding: NSUTF8StringEncoding)
+        }
+        catch {
+            print("error saving")
+        }
+
+    }
+    
     class func writeEmojisToFile(emojiList: [Emoji]) {
         
         var emojiString = "["
