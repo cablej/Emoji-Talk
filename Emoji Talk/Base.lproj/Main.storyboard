@@ -398,6 +398,31 @@
             <point key="canvasLocation" x="2471" y="1751"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="kxa-gk-lHo">
+            <objects>
+                <viewController id="Yaq-vf-SVp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zlu-lg-WcL"/>
+                        <viewControllerLayoutGuide type="bottom" id="VZP-Am-fAO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JgA-xD-AqS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txB-Xj-siE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                                <state key="normal" title="Done"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hxz-r1-L2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="-392"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Emoji_Talk" customModuleProvider="target" sceneMemberID="viewController">
@@ -460,6 +485,11 @@
                                         <barButtonItem key="leftBarButtonItem" title="Settings" id="OG1-Ib-w8b">
                                             <connections>
                                                 <segue destination="JXV-Lc-Wvb" kind="show" id="In5-fZ-OyG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="📖" id="sRa-wL-NRI">
+                                            <connections>
+                                                <segue destination="Yaq-vf-SVp" kind="show" id="0ry-PS-u2x"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -529,6 +559,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="emojiCollectionView" destination="Jva-zB-0F0" id="I2Z-At-Bie"/>
+                        <outlet property="storyBarButtonItem" destination="sRa-wL-NRI" id="Bi8-Kk-zg6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

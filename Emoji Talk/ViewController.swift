@@ -17,18 +17,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     let fetcher = EmojiFetcher()
     
+    @IBOutlet var storyBarButtonItem: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         emojiCollectionView.dataSource = self
         emojiCollectionView.delegate = self
         
-        //searchTextField.delegate = self
+        let font = UIFont.systemFontOfSize(32)
         
-        initializeEmojis()
-    }
-    
-    func initializeEmojis() {
+        storyBarButtonItem.setTitleTextAttributes([NSFontAttributeName:font], forState: UIControlState.Normal)
+        
     }
     
     override func viewWillAppear(animated: Bool) {

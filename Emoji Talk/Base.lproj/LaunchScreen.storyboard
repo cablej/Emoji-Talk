@@ -16,7 +16,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Emoji_Speaks_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="rzW-D2-iGi">
+                                <rect key="frame" x="194" y="172" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="6bO-y7-V1w"/>
+                                    <constraint firstAttribute="height" constant="256" id="o2W-L2-TOJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rzW-D2-iGi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GlD-t4-EnY"/>
+                            <constraint firstItem="rzW-D2-iGi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="kuR-tZ-VJV"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +37,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Emoji_Speaks_Logo" width="1024" height="1024"/>
+    </resources>
 </document>

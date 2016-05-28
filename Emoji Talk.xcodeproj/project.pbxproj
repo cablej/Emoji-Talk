@@ -25,6 +25,7 @@
 		D17E1BFC1CF9025500138C02 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E1BFB1CF9025500138C02 /* EmojiCell.swift */; };
 		D17E1BFE1CF90E1900138C02 /* EmojiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E1BFD1CF90E1900138C02 /* EmojiDetailViewController.swift */; };
 		D17E1C001CF926FB00138C02 /* SpellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E1BFF1CF926FB00138C02 /* SpellViewController.swift */; };
+		D1B945891CF9FABA0049B210 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B945881CF9FABA0049B210 /* StoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		D17E1BFB1CF9025500138C02 /* EmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 		D17E1BFD1CF90E1900138C02 /* EmojiDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiDetailViewController.swift; sourceTree = "<group>"; };
 		D17E1BFF1CF926FB00138C02 /* SpellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellViewController.swift; sourceTree = "<group>"; };
+		D1B945881CF9FABA0049B210 /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				D126B7171CF9D48E00502198 /* EmojiTableViewCell.swift */,
 				D126B7191CF9DE0300502198 /* EditEmojiViewController.swift */,
 				D126B71D1CF9EC6100502198 /* AddEmojiTableTableViewController.swift */,
+				D1B945881CF9FABA0049B210 /* StoryViewController.swift */,
 			);
 			path = "Emoji Talk";
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B945891CF9FABA0049B210 /* StoryViewController.swift in Sources */,
 				D126B7161CF9CF6A00502198 /* EmojiTalkHelper.swift in Sources */,
 				D126B71A1CF9DE0300502198 /* EditEmojiViewController.swift in Sources */,
 				D126B7181CF9D48E00502198 /* EmojiTableViewCell.swift in Sources */,
