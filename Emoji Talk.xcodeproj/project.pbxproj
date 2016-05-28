@@ -146,6 +146,7 @@
 				D168059B1CF8FCA80080A13B /* AppDelegate.swift */,
 				D14DA2861CF94B71001F281A /* SettingsViewController.swift */,
 				D168059D1CF8FCA80080A13B /* ViewController.swift */,
+				D1B945881CF9FABA0049B210 /* StoryViewController.swift */,
 				D17E1BFD1CF90E1900138C02 /* EmojiDetailViewController.swift */,
 				D17E1BFF1CF926FB00138C02 /* SpellViewController.swift */,
 				D168059F1CF8FCA80080A13B /* Main.storyboard */,
@@ -159,7 +160,6 @@
 				D126B7171CF9D48E00502198 /* EmojiTableViewCell.swift */,
 				D126B7191CF9DE0300502198 /* EditEmojiViewController.swift */,
 				D126B71D1CF9EC6100502198 /* AddEmojiTableTableViewController.swift */,
-				D1B945881CF9FABA0049B210 /* StoryViewController.swift */,
 			);
 			path = "Emoji Talk";
 			sourceTree = "<group>";

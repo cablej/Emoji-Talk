@@ -164,5 +164,13 @@
              ],
  "groups": ["emoji"],
  "name": "I'm thirsty"
+ }, {
+	"character": "🚽",
+	"aliases": [
+                "bathroom",
+                "pee"
+                ],
+	"groups": [],
+	"name": "I have to go to the bathroom."
  }
  ]

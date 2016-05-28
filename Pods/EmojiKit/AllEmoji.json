@@ -1949,15 +1949,6 @@
 	"groups": [],
 	"name": "ok hand"
 }, {
-	"character": "🔪",
-	"aliases": [
-		"cutlery",
-		"hocho",
-		"silverware"
-	],
-	"groups": [],
-	"name": "knife"
-}, {
 	"character": "🌉",
 	"aliases": [
 		"night",
@@ -2646,15 +2637,6 @@
 		"cloth"
 	],
 	"name": "t-shirt"
-}, {
-	"character": "💣",
-	"aliases": [
-		"boom",
-		"explode",
-		"dangerous"
-	],
-	"groups": [],
-	"name": "bomb"
 }, {
 	"character": "🚠",
 	"aliases": [
@@ -3635,14 +3617,6 @@
 		"sport"
 	],
 	"name": "rugby football"
-}, {
-	"character": "💥",
-	"aliases": [
-		"bomb",
-		"explode"
-	],
-	"groups": [],
-	"name": "boom"
 }, {
 	"character": "🐌",
 	"aliases": [],
@@ -5999,16 +5973,6 @@
 	"groups": [
 
 	],
-	"character": "🖕",
-	"name": "middle finger",
-	"aliases": [
-		"fuck you",
-		"hand"
-	]
-}, {
-	"groups": [
-
-	],
 	"character": "🔘",
 	"name": "radio button",
 	"aliases": [
@@ -6055,17 +6019,6 @@
 	"name": "desert",
 	"aliases": [
 		"cactus"
-	]
-}, {
-	"groups": [
-
-	],
-	"character": "🗡",
-	"name": "dagger knife",
-	"aliases": [
-		"weapon",
-		"stab",
-		"sword"
 	]
 }, {
 	"groups": [

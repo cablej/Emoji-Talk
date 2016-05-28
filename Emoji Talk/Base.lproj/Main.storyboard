@@ -397,10 +397,10 @@
             </objects>
             <point key="canvasLocation" x="2471" y="1751"/>
         </scene>
-        <!--View Controller-->
+        <!--Story View Controller-->
         <scene sceneID="kxa-gk-lHo">
             <objects>
-                <viewController id="Yaq-vf-SVp" sceneMemberID="viewController">
+                <viewController id="Yaq-vf-SVp" customClass="StoryViewController" customModule="Emoji_Talk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zlu-lg-WcL"/>
                         <viewControllerLayoutGuide type="bottom" id="VZP-Am-fAO"/>
@@ -409,15 +409,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txB-Xj-siE">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txB-Xj-siE">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
-                                <state key="normal" title="Done"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDoneButtonTapped:" destination="Yaq-vf-SVp" eventType="touchUpInside" id="DZQ-rE-RQg"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hhs-TK-rFA">
+                                <rect key="frame" x="0.0" y="96" width="600" height="133"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bfI-TW-Swx">
+                                <rect key="frame" x="0.0" y="256" width="600" height="150"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.63137254899999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="xqa-UJ-yod"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="psg-gn-n87">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCell" id="VHS-51-NPH" customClass="EmojiCell" customModule="Emoji_Talk" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tx6-yF-Aya">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Tx6-yF-Aya" secondAttribute="bottom" constant="-8" id="5h8-tf-HN4"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Tx6-yF-Aya" secondAttribute="trailing" constant="-8" id="8aW-hC-g4d"/>
+                                            <constraint firstItem="Tx6-yF-Aya" firstAttribute="centerX" secondItem="VHS-51-NPH" secondAttribute="centerX" id="C9A-7T-wZQ"/>
+                                            <constraint firstItem="Tx6-yF-Aya" firstAttribute="top" secondItem="VHS-51-NPH" secondAttribute="topMargin" constant="-8" id="Cl4-UA-EKJ"/>
+                                            <constraint firstItem="Tx6-yF-Aya" firstAttribute="leading" secondItem="VHS-51-NPH" secondAttribute="leadingMargin" constant="-8" id="IvQ-IJ-qLP"/>
+                                            <constraint firstItem="Tx6-yF-Aya" firstAttribute="centerY" secondItem="VHS-51-NPH" secondAttribute="centerY" id="qBf-7Q-5H3"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="emojiLabel" destination="Tx6-yF-Aya" id="L0X-Mv-wYW"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1e-pL-9QC">
+                                <rect key="frame" x="12" y="7" width="85" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="eFz-t7-jUB"/>
+                                    <constraint firstAttribute="height" constant="85" id="iTc-hi-kGG"/>
+                                </constraints>
+                                <state key="normal" title="Go" image="play_icon">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPlayButtonTapped:" destination="Yaq-vf-SVp" eventType="touchUpInside" id="BIg-0W-YN5"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.08235294118" green="0.63137254899999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bfI-TW-Swx" firstAttribute="top" secondItem="Hhs-TK-rFA" secondAttribute="bottom" constant="20" id="9S3-Q0-UFv"/>
+                            <constraint firstItem="Hhs-TK-rFA" firstAttribute="leading" secondItem="JgA-xD-AqS" secondAttribute="leadingMargin" constant="-20" id="BvM-Gr-s61"/>
+                            <constraint firstItem="D1e-pL-9QC" firstAttribute="top" secondItem="Zlu-lg-WcL" secondAttribute="bottom" constant="5.5" id="IOW-8w-QV1"/>
+                            <constraint firstItem="D1e-pL-9QC" firstAttribute="leading" secondItem="JgA-xD-AqS" secondAttribute="leadingMargin" constant="-8" id="KCc-lz-0fG"/>
+                            <constraint firstItem="Hhs-TK-rFA" firstAttribute="top" secondItem="D1e-pL-9QC" secondAttribute="bottom" constant="5.5" id="PSU-OR-ngn"/>
+                            <constraint firstItem="txB-Xj-siE" firstAttribute="centerX" secondItem="JgA-xD-AqS" secondAttribute="centerX" id="Wwo-ek-1Wb"/>
+                            <constraint firstItem="bfI-TW-Swx" firstAttribute="leading" secondItem="JgA-xD-AqS" secondAttribute="leadingMargin" constant="-20" id="h6j-aa-TS0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hhs-TK-rFA" secondAttribute="trailing" constant="-20" id="hPC-Eq-gXe"/>
+                            <constraint firstItem="Hhs-TK-rFA" firstAttribute="top" secondItem="Zlu-lg-WcL" secondAttribute="bottom" constant="96" id="ijh-Jz-HuW"/>
+                            <constraint firstItem="txB-Xj-siE" firstAttribute="top" secondItem="Zlu-lg-WcL" secondAttribute="bottom" id="oDK-TZ-20S"/>
+                            <constraint firstItem="txB-Xj-siE" firstAttribute="leading" secondItem="JgA-xD-AqS" secondAttribute="leadingMargin" constant="-20" id="tOO-pw-fdF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bfI-TW-Swx" secondAttribute="trailing" constant="-20" id="v8T-Vc-rBO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="txB-Xj-siE" secondAttribute="trailing" constant="-20" id="yez-c2-KeO"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="emojiCollectionView" destination="bfI-TW-Swx" id="Tbi-Vs-Ahk"/>
+                        <outlet property="storyTextView" destination="Hhs-TK-rFA" id="Zl9-JF-V0s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hxz-r1-L2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1284,6 +1370,9 @@
             <point key="canvasLocation" x="1754" y="2418"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play_icon" width="256" height="256"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="akr-oB-xiN"/>
     </inferredMetricsTieBreakers>
