@@ -64,10 +64,6 @@ class SpellViewController: UIViewController {
         return nil
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true;
-    }
-    
     @IBAction func onEmojiButtonTapped(sender: UIButton) {
         synth = AVSpeechSynthesizer()
         let myUtterance = AVSpeechUtterance(string: (currentEmoji?.name)!)

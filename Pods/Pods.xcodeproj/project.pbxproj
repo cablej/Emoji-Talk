@@ -15,6 +15,7 @@
 		55BBDD3FA70C5AB4588E08BA57D62F29 /* Pods-Emoji Talk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA91FD08C0370FE9213BF2555B664441 /* Pods-Emoji Talk-dummy.m */; };
 		82EDACC2D2E340EEF8081F7FE239A3EB /* EmojiKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 971E07C85C89E7403819380EFD3C761D /* EmojiKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B41B562D25C0FF30087B90FDE72CAACD /* AllEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CBCD013CCEE190A82DC6F200D220DCE /* AllEmoji.json */; };
+		D17E1C021CF9400100138C02 /* AllEmoji2.json in Resources */ = {isa = PBXBuildFile; fileRef = D17E1C011CF9400100138C02 /* AllEmoji2.json */; };
 		DBCFC2DCC5E06B5F5756639BA9D3B80A /* Pods-Emoji Talk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C2CDD4247E9BA1A431DD28BFA2CA6CE /* Pods-Emoji Talk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFF7D7148924236B019CB92BC050AE85 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = B192F1457CA12A975982D0FC6275A075 /* Emoji.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		B7F159983F6E170D5FE47682786DBA47 /* Pods_Emoji_Talk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emoji_Talk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA72C2252A63068D7A9549230FEAF91 /* EmojiKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EmojiKit-dummy.m"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D17E1C011CF9400100138C02 /* AllEmoji2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllEmoji2.json; sourceTree = "<group>"; };
 		FB82DF27241B95928759C7BE99BAB923 /* DictionarySerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionarySerialization.swift; path = EmojiKit/DictionarySerialization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				9CBCD013CCEE190A82DC6F200D220DCE /* AllEmoji.json */,
+				D17E1C011CF9400100138C02 /* AllEmoji2.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B41B562D25C0FF30087B90FDE72CAACD /* AllEmoji.json in Resources */,
+				D17E1C021CF9400100138C02 /* AllEmoji2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

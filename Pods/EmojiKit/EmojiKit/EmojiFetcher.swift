@@ -47,7 +47,7 @@ public struct EmojiFetcher {
     public func cancelFetches() {
         backgroundQueue.cancelAllOperations()
     }
-
+    
 }
 
 private final class EmojiFetchOperation: NSOperation {

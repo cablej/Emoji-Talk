@@ -16,7 +16,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var emojiList : [Emoji] = []
     
     var searchQuery = ""
-    var DEFAULT_QUERY = "face"
+    var DEFAULT_QUERY = "emoji"
     
     @IBOutlet var searchTextField: UITextField!
     
@@ -28,9 +28,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         emojiCollectionView.dataSource = self
         emojiCollectionView.delegate = self
         
-        searchTextField.delegate = self
+        //searchTextField.delegate = self
         
         processQuery()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let color = NSUserDefaults.standardUserDefaults().colorForKey("color") {
+            emojiCollectionView.backgroundColor = color
+        }
     }
     
     func processQuery() {
@@ -68,15 +76,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         processQuery()
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        return true
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? EmojiDetailViewController {
             let selectedRow = (emojiCollectionView.indexPathsForSelectedItems()?.first!.row)!
             vc.currentEmoji = emojiList[selectedRow]
         }
+    }
+    
+    @IBAction func onSettingsButtonTapped(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 }
