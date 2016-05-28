@@ -17,6 +17,7 @@
 		D16805BC1CF8FCA80080A13B /* Emoji_TalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16805BB1CF8FCA80080A13B /* Emoji_TalkUITests.swift */; };
 		D17E1BFC1CF9025500138C02 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E1BFB1CF9025500138C02 /* EmojiCell.swift */; };
 		D17E1BFE1CF90E1900138C02 /* EmojiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E1BFD1CF90E1900138C02 /* EmojiDetailViewController.swift */; };
+		D17E1C001CF926FB00138C02 /* SpellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E1BFF1CF926FB00138C02 /* SpellViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		D16805BD1CF8FCA80080A13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D17E1BFB1CF9025500138C02 /* EmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 		D17E1BFD1CF90E1900138C02 /* EmojiDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiDetailViewController.swift; sourceTree = "<group>"; };
+		D17E1BFF1CF926FB00138C02 /* SpellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				D16805A71CF8FCA80080A13B /* Info.plist */,
 				D17E1BFB1CF9025500138C02 /* EmojiCell.swift */,
 				D17E1BFD1CF90E1900138C02 /* EmojiDetailViewController.swift */,
+				D17E1BFF1CF926FB00138C02 /* SpellViewController.swift */,
 			);
 			path = "Emoji Talk";
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			files = (
 				D17E1BFE1CF90E1900138C02 /* EmojiDetailViewController.swift in Sources */,
 				D17E1BFC1CF9025500138C02 /* EmojiCell.swift in Sources */,
+				D17E1C001CF926FB00138C02 /* SpellViewController.swift in Sources */,
 				D168059E1CF8FCA80080A13B /* ViewController.swift in Sources */,
 				D168059C1CF8FCA80080A13B /* AppDelegate.swift in Sources */,
 			);
