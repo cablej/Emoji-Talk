@@ -30,8 +30,28 @@ extension NSUserDefaults {
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet var buttonCollection: [UIButton]!
+    
+    @IBOutlet var customizeEmojiButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        for button in buttonCollection {
+            button.layer.cornerRadius = 15;
+        }
+        
+        if let color = NSUserDefaults.standardUserDefaults().colorForKey("color") {
+            customizeEmojiButton.backgroundColor = color
+        }
+    }
+    
     @IBAction func onSetColorButtonTapped(sender: UIButton) {
         NSUserDefaults.standardUserDefaults().setColor(sender.backgroundColor, forKey: "color")
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func onDoneButtonTapped(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     

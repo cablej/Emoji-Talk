@@ -75,7 +75,7 @@ class EmojiTalkHelper: NSObject {
         var emojiString = "["
         
         for emoji in emojiList {
-            emojiString += "{\"character\":\"\(emoji.character)\", \"groups\":[\"emoji\"],\"name\":\"\(emoji.name)\", \"aliases\":[]},"
+            emojiString += "{\"character\":\"\(emoji.character)\", \"groups\":[\"emoji\"],\"name\":\"\(emoji.name.stringByReplacingOccurrencesOfString("}", withString: "").stringByReplacingOccurrencesOfString("\"", withString: ""))\", \"aliases\":[]},"
         }
         
         emojiString = String(emojiString.characters.dropLast()) //remove last comma
