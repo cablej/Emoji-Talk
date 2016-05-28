@@ -27,6 +27,10 @@ class EmojiTalkHelper: NSObject {
             let url = NSURL(fileURLWithPath: writePath)
             do {
                 try fileContent!.writeToURL(url.URLByAppendingPathComponent(fileName), atomically: false, encoding: NSUTF8StringEncoding)
+                
+                readEmojisFromFile({ (emojiList) in
+                    completion(emojiList)
+                })
             }
             catch {
                 print("error saving")
